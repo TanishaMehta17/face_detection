@@ -4,7 +4,7 @@ import 'package:face_detection/home.dart';
 import 'package:flutter/material.dart';
 
 class MySplash extends StatefulWidget {
-   static const routeName = "/splash";
+  static const routeName = "/splash";
   const MySplash({super.key});
 
   @override
@@ -28,7 +28,12 @@ class _MySplashState extends State<MySplash> {
       backgroundColor: Colors.blue[400],
       body: Column(
         children: [
-          Center(child: Image.network("https://cdn1.expresscomputer.in/wp-content/uploads/2021/03/24161759/EC_Artificial_Intelligence_750.jpg")),
+          const SizedBox(height: 150),
+          Center(
+              child: Image.network(
+                  "https://cdn1.expresscomputer.in/wp-content/uploads/2021/03/24161759/EC_Artificial_Intelligence_750.jpg",
+                  width: 450,
+                  height: 200)),
           const SizedBox(height: 25),
           GestureDetector(
             onTap: () {
@@ -50,7 +55,7 @@ class _MySplashState extends State<MySplash> {
           const SizedBox(height: 25),
           GestureDetector(
             onTap: () {
-                Navigator.pushNamed(context, AppRoutes.object);
+              Navigator.pushNamed(context, AppRoutes.object);
             },
             child: Container(
               width: MediaQuery.of(context).size.width - 250,
